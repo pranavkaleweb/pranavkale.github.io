@@ -5,8 +5,11 @@
 </head>
 <body>
 	<script>
-		dodument.write(document.getElementById("name"));
-		dodument.write(document.getElementById("email"));
+		const urlParams = new URLSearchParams(windo.location.search);
+		const name1 = urlParams.get('name');
+		const email1 = urlParams.get('email');
+		console.log(name1);
+		console.log(email1);
 	</script>
 </body>
 </html>
