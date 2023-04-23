@@ -8,14 +8,12 @@
 		Logged in Successfully!
 	</h1>
 	<script>
-	function logout() {
-		FB.logout(function(response) {
-		  // user is now logged out
-		  document.write('logged out!');
-		});
+	function logout(){
+		FB.logout();
+		alert("facebook logout!");
 	}
 	</script>
-	<button onclick="logout()">Logout from Facebook</button>
+	<button onclick="logout()">Logout</button>
 </body>
 </html>
 
