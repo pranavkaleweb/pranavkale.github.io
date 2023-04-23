@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
+<script src="config/facebook.js"></script>
 </head>
 <body>
 <center>
 <h1>Login Page</h1>
-<script src="config/facebook.js"></script>
+
 <script>
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
@@ -37,7 +38,7 @@ statusChangeCallback(response);
 }
 window.fbAsyncInit = function() {
 FB.init({
-appId : clientID,
+appId : obj.clientID,
 cookie : true, // enable cookies to allow the server to access
 // the session
 xfbml : true, // parse social plugins on this page
