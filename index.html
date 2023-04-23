@@ -8,8 +8,8 @@
 <center>
 <h1>Login Page</h1>
 <script>
-    statusChangeCallback();
-    checkLoginState();
+    fbHelper.statusChangeCallback();
+    fbHelper.checkLoginState();
     window.fbAsyncInit = function() {
         FB.init({
         appId : fbLogObj.clientID,
