@@ -7,7 +7,7 @@
 <body>
 <center>
 <h1>Login Page</h1>
-<scrpit>
+<script>
     window.fbAsyncInit = function() {
         FB.init({
         appId : fbLogObj.clientID,
@@ -51,7 +51,7 @@
         document.getElementById("status").innerHTML = '<p>Welcome '+response.name+'! <a href=login.html?name='+ response.name.replace(" ", "_") +'&email='+ response.email +'>Continue with facebook login</a></p>'
         });
     }
-</scrpit>
+</script>
 <!--
 Below we include the Login Button social plugin. This button uses
 the JavaScript SDK to present a graphical Login button that triggers
