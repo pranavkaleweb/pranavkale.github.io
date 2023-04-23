@@ -8,14 +8,6 @@
 <center>
 <h1>Login Page</h1>
 <script>
-    // This function is called when someone finishes with the Login
-    // Button. See the onlogin handler attached to it in the sample
-    // code below.
-    function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-    fbHelper.statusChangeCallback(response);
-    });
-    }
     window.fbAsyncInit = function() {
         FB.init({
         appId : fbLogObj.clientID,
@@ -37,7 +29,7 @@
         // These three cases are handled in the callback function.
         
         FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
+        fbHelper.statusChangeCallback(response);
         });
         };
         // Load the SDK asynchronously
@@ -66,7 +58,7 @@ the JavaScript SDK to present a graphical Login button that triggers
 the FB.login() function when clicked.
 -->
 <br><br>
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email" onlogin="fbHelper.checkLoginState();">
 </fb:login-button>
 <div id="status">
 </div>

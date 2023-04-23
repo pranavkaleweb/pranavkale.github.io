@@ -18,5 +18,13 @@ let fbHelper = {
     // they are logged into this app or not.
     document.getElementById('status').innerHTML = 'Login with Facebook ';
     }
-    }
+    },
+    // This function is called when someone finishes with the Login
+    // Button. See the onlogin handler attached to it in the sample
+    // code below.
+    checkLoginState: function() {
+        FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+        });
+        }
 }
