@@ -7,7 +7,14 @@
 	<h1>
 		Logged in Successfully!
 	</h1>
-	<a href="/index.html">Logout</a>
+	<script>
+	function logout() {
+		FB.logout(function(response) {
+		  // user is now logged out
+		});
+	}
+	</script>
+	<button onclick="javascript:logout();">Logout from Facebook</button>
 </body>
 </html>
 
